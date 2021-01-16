@@ -78,9 +78,6 @@ namespace Ranger
             characterDisplay = PrefabAPI.InstantiateClone(myCharacter.GetComponent<ModelLocator>().modelBaseTransform.gameObject, "WardenDisplay", true);
 
 
-            Debug.Log("cumcannon");
-
-
             //add custom menu animation script
             characterDisplay.AddComponent<MenuAnim>();
 
@@ -107,7 +104,6 @@ namespace Ranger
             wardenCrosshair = PrefabAPI.InstantiateClone(Resources.Load<GameObject>("Prefabs/Crosshair/StandardCrosshairSmall"), "WardenCrosshair", true);
             wardenCrosshair.AddComponent<NetworkIdentity>();
 
-            Debug.Log("cum smoothie");
             //networking
 
             if (myCharacter) PrefabAPI.RegisterNetworkPrefab(myCharacter);
